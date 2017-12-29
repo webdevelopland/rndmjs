@@ -1,10 +1,6 @@
-import { rand } from './rand';
+import { generateRandSymbols } from './generate-rand-symbols';
 
 // Get random hex color
 export function randcolor(): string {
-  var hex: string = "";
-  for (let i = 0; i < 6; i++) {
-    hex += rand(0, 15).toString(16);
-  }
-  return "#" + hex;
+  return '#' + generateRandSymbols(16, 6);
 }

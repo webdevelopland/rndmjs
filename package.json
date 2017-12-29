@@ -1,7 +1,7 @@
 {
   "name": "rndmjs",
   "description": "Random functions",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "scripts": {
     "compile": "gulp"
   },
