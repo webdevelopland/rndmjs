@@ -1,5 +1,5 @@
 # rndmjs
-## v1.1.1 ( last update: 30 dec 2017 )
+## v1.2.0 ( last update: 20 mar 2018 )
 Random functions
 
 ### Install
