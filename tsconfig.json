@@ -3,11 +3,12 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
-    "lib": ["es2015", "dom"],
+    "lib": ["es2018", "dom"],
     "suppressImplicitAnyIndexErrors": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "declaration": true,
-    "baseUrl": "."
+    "baseUrl": "./src",
+    "outDir": "./dist/out-tsc"
   }
 }
