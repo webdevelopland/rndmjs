@@ -1,11 +1,11 @@
 # rndmjs
-## v1.2.0 ( last update: 20 mar 2018 )
+## v1.3.0 ( last update: 10 mar 2022 )
 Random functions
 
 ### Install
 npm
 ```javascript
-npm install rndmjs --save
+npm install rndmjs
 ```
 
 Node.js
@@ -16,7 +16,7 @@ const { rand, randstr, ... } = require('rndmjs');
 ```
 
 Typescript
-```javascript
+```typescript
 import * as rndmjs from 'rndmjs';
 // or
 import { rand, randstr, ... } from 'rndmjs';
@@ -31,53 +31,71 @@ Browser
 ```
 
 ### rand()
-More simple random function
+Simple random function
 ```javascript
-var r = rand(1,10); // 2
-var r = rand(1,10); // 1
-var r = rand(1,10); // 10
-var r = rand(1,10); // 7
+let r1 = rand(1,10); // 2
+let r2 = rand(1,10); // 1
+let r3 = rand(1,10); // 10
+let r4 = rand(1,10); // 7
 ```
 
 ### randcolor()
-Get random hex color
+Get a random hex color
 ```javascript
-var color = randcolor();
+let color = randcolor();
 ```
 
 ### randstr()
-Get random string
+Get a random string
 ```javascript
-var str = randstr(12); // iei6nbarrq4j
-var str = randstr(12); // e97u4cf1aqop
-var str = randstr(22); // npsc876eort5jgp34jrdpg
+let str1 = randstr(12); // iei6nbarrq4j
+let str2 = randstr(12); // e97u4cf1aqop
+let str3 = randstr(22); // npsc876eort5jgp34jrdpg
 ```
 
 ### randstr64()
-Get random string with 64 symbals dict
+Get a random string with 64 symbals dict
 ```javascript
-var str = randstr64(22); // VdsYDLAL_pTfNUIBxZMW52
+let str = randstr64(22); // VdsYDLAL_pTfNUIBxZMW52
 ```
 
 ### randtext()
 Get random text (without numerals)
 ```javascript
-var text = randtext(22); // dgqfihmyuukygcrxqbxruo
+let text = randtext(22); // dgqfihmyuukygcrxqbxruo
 ```
 
 ### randCustomString()
-Get random string with specific dict
+Get a random string with specific dict
 ```javascript
-var dict = ['x','y','z'];
-var str = randCustomString(dict, 5); // zyyxz
+let dict = ['x', 'y', 'z'];
+let str = randCustomString(dict, 5); // zyyxz
 ```
 
 ### randvalue()
-Get random value of an array
+Get a random value of an array
 ```javascript
-var array = [1,2,3,4,5];
-var value = randvalue(array); // 3
-var value = randvalue(array); // 5
+let array = [1, 2, 3, 4, 5];;
+let value1 = randvalue(array); // 3
+let value2 = randvalue(array); // 5
+```
+
+### shuffle()
+Randomize order of an array
+```javascript
+let array = [1, 2, 3, 4, 5];
+shuffle(dict1);
+// [3, 5, 1, 4, 2]
+```
+
+### generatePassword()
+Generate a password from several dicts.  
+At least one char from each dict guaranteed will be in the final password
+```javascript
+let dict1 = ['x', 'y', 'z'];
+let dict2 = ['1', '2', '3', '4', '5'];
+let value1 = generatePassword(2, dict1, dict2); // 5z
+let value2 = generatePassword(10, dict1, dict2); // zy454y33yx
 ```
 
 ### rndmjs dicts
@@ -86,6 +104,7 @@ Available dicts by default
 // alphabet - [a-z]
 // Alphabet - [A-Z]
 // numerals - [0-9]
+// special - symbols: !@#$...
 // dict16 - [0-9,a-f]
 // dict36 - [0-9,a-z]
 // dict64 - [0-9,a-z,A-Z,-,_]

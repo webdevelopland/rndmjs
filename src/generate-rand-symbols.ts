@@ -8,7 +8,7 @@ export function generateRandSymbols(radix: number, length: number): string {
   if (radix > 36) {
     radix = 36;
   }
-  var symbols: string = '';
+  let symbols: string = '';
   for (let i = 0; i < length; i++) {
     symbols += rand(0, radix - 1).toString(radix);
   }
